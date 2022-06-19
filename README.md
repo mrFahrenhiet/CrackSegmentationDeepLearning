@@ -1,4 +1,4 @@
-# Self Attention Based Efficient U-Net for Crack Segmentation
+# Multi Scale Attention Based Efficient U-Net for Crack Segmentation
 
 ## Abstract
 Crack detection, classification, and characterization are key
