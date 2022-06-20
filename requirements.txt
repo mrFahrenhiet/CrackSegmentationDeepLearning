@@ -1,0 +1,9 @@
+numpy==1.22.4
+pandas==1.4.2
+Pillow==9.1.1
+scikit_learn==1.1.1
+segmentation_models_pytorch==0.3.0.dev0
+torch==1.11.0
+torchcontrib==0.0.2
+torchvision==0.12.0
+tqdm==4.64.0

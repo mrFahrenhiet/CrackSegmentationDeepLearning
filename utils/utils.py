@@ -2,6 +2,21 @@ import torch
 from torch import nn
 import numpy as np
 from torch.nn import functional as F
+from averageMeter import AverageMeter
+
+
+def init_log():
+    log = {
+        'loss': AverageMeter(),
+        'time': AverageMeter(),
+        'iou': AverageMeter(),
+        'dice': AverageMeter(),
+        'acc': AverageMeter(),
+        'precision': AverageMeter(),
+        'recall': AverageMeter(),
+        'f1': AverageMeter()
+    }
+    return log
 
 
 def compute_dice2(pred, gt):

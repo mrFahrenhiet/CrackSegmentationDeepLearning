@@ -21,9 +21,22 @@ python train.py --path_imgs "path_to_image_folder" --path_masks "path_to_mask_fo
 
 <hr>
 
+## Evaluate Model
+```commandline
+python evaluate.py
+```
+<hr>
 ## Model Architecture
 <br>
+<figure>
 <img src="assets/MainArchitecture.drawio Conf.png">
+<figcaption align = "center"><b>Fig.1 - Main Architecture</b></figcaption>
+</figure>
+<br>
+<figure>
+<img src="assets/MultiScaleAttention.drawio.png">
+<figcaption align = "center"><b>Fig.2 - Multi Scale Attention</b></figcaption>
+</figure>
 <hr>
 
 ## Dataset
@@ -56,11 +69,13 @@ the testing set
     <td>0.663</td>
     </tr>
 </table>
+<br>
+<figure>
+<figcaption><b>RGB Image</b>  &ensp;&ensp;&ensp;&ensp;  <b>Ground Truth</b>&ensp;&ensp;&ensp;&ensp;<b>Prediction (Model Output)</b></figcaption>
 
-&ensp;&ensp;&ensp;<b>RGB Image</b>  &ensp;&ensp;&ensp;&ensp;  <b>Ground Truth</b>&ensp;&ensp;&ensp;&ensp;<b>Prediction (Model Output)</b>
-
-&ensp;&ensp;&ensp;&ensp;<img src="assets/result_imgs_crack500.drawio.png">
-
+<img src="assets/result_imgs_crack500.drawio.png">
+<figcaption align="center"><b>Fig 3: Result From model</b></figcaption>
+</figure>
 <hr>
 
 ## Resouces

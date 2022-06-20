@@ -13,28 +13,13 @@ import os
 
 # local imports
 from model.modelMain import Unet
-from dataLoader import CrackData
-from utils.averageMeter import AverageMeter
+from dataset import CrackData
 from utils.callbacks import CallBacks
 from utils.utils import *
 from utils.lrSchedular import OneCycleLR
-from config import train_loader_config, val_loader_config
+from config import trainLoaderConfig, valLoaderConfig, modelConfig
 
 RANDOM_STATE = 42
-
-
-def init_log():
-    log = {
-        'loss': AverageMeter(),
-        'time': AverageMeter(),
-        'iou': AverageMeter(),
-        'dice': AverageMeter(),
-        'acc': AverageMeter(),
-        'precision': AverageMeter(),
-        'recall': AverageMeter(),
-        'f1': AverageMeter()
-    }
-    return log
 
 
 def train_step(model, optim, criteria, loader, accumulation_steps, scaler, epoch, max_epochs):
@@ -148,9 +133,9 @@ def getDataLoaders(dfTrain, dfVal, **kwargs):
     return trainLoader, valLoader
 
 
-def buildModel(encoderBackbone='efficientnet-b2'):
+def buildModel(config):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = Unet(encoder_name=encoderBackbone)
+    model = Unet(encoder_name=config['encoderBackbone'])
     model = model.to(device)
     return model
 
@@ -169,8 +154,8 @@ def buildDataset(imgs_path, masks_path):
     dfTrain, dfVal = train_test_split(df, test_size=0.2, random_state=RANDOM_STATE, shuffle=True)
     trainLoader, valLoader = getDataLoaders(dfTrain,
                                             dfVal,
-                                            training_data=train_loader_config,
-                                            val_data=val_loader_config)
+                                            training_data=trainLoaderConfig,
+                                            val_data=valLoaderConfig)
 
     return trainLoader, valLoader
 
@@ -188,7 +173,7 @@ if __name__ == "__main__":
 
     trainLoader, valLoader = buildDataset(image_path, masks_path)
 
-    model = buildModel(encoderBackbone='efficientnet-b2')
+    model = buildModel(modelConfig)
 
     lr = 0.09
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
