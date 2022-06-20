@@ -1,4 +1,4 @@
-# Self Attention Based Efficient U-Net for Crack Segmentation
+# Multi Scale Attention Based Efficient U-Net for Crack Segmentation
 
 ## Abstract
 Crack detection, classification, and characterization are key
@@ -6,7 +6,7 @@ components of automatic structural health monitoring systems. Convolution
 based encoder-decoder deep learning architecture have played a
 significant role in developing crack segmentation models possessing limitations
 in capturing the global context of the image. To overcome the
-stated limitation, in the present study we propose a novel Self Attention
+stated limitation, in the present study we propose a novel Multi-Scale Attention
 based Efficient U-Net which effectively tries to solve this limitation. The
 proposed method achieved an F1 Score of 0.775, an IoU of 0.663 and
 an accuracy of 97.3% on Crack500 dataset improving upon the current
