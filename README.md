@@ -88,8 +88,6 @@ the testing set
 <hr>
 
 ## ToDo
-- Add evaluation script
-- Add prediction script
 - Dockerise code
 
 ## References
