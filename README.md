@@ -94,3 +94,5 @@ the testing set
 [1] F. Yang, L. Zhang, S. Yu, D. Prokhorov, X. Mei, and H. Ling, “Feature pyramid and
 hierarchical boosting network for pavement crack detection,” IEEE Transactions
 on Intelligent Transportation Systems, vol. 21, no. 4, pp. 1525–1535, 2020.
+
+[2] Lyu, C., Hu, G. & Wang, D. Attention to fine-grained information: hierarchical multi-scale network for retinal vessel segmentation. Vis Comput 38, 345–355 (2022). https://doi.org/10.1007/s00371-020-02018-w
