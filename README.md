@@ -34,6 +34,7 @@ python evaluate.py --path_imgs "path_to_image_folder" --path_masks "path_to_mask
 <figcaption align = "center"><b>Fig.1 - Main Architecture</b></figcaption>
 </figure>
 <br>
+<br>
 <figure>
 <img src="assets/MultiScaleAttention.drawio.png">
 <figcaption align = "center"><b>Fig.2 - Multi Scale Attention</b></figcaption>
