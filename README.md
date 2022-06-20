@@ -23,9 +23,10 @@ python train.py --path_imgs "path_to_image_folder" --path_masks "path_to_mask_fo
 
 ## Evaluate Model
 ```commandline
-python evaluate.py
+python evaluate.py --path_imgs "path_to_image_folder" --path_masks "path_to_mask_folder" --model_path "path_to_saved_model" --result_path "path_to_save_results_from_test" --plot_path "path_to_store_plots"
 ```
 <hr>
+
 ## Model Architecture
 <br>
 <figure>
