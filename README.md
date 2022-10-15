@@ -68,7 +68,7 @@ the testing set
     <td>0.763</td>
     <td>0.790</td>
     <td>0.775</td>
-    <td>0.663</td>
+    <td>0.621</td>
     </tr>
 </table>
 <br>
